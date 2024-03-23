@@ -77,11 +77,11 @@ admin.role=ADMIN
   ```json
       {
         "authorName": "John Doe",
-        "text": "8888",
+        "text": "new text",
         "creationDate": "2024-03-23T08:00:00.000+00:00",
             "topic": {
                 "id": 1,
-                "title": "9999"
+                "title": "тема"
             }
         }
 
