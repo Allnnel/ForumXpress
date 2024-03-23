@@ -117,7 +117,7 @@ admin.role=ADMIN
   "password": "updated_password"
 }
 
-# DELETE /security
+### DELETE /security
 
 **Описание:** Удаление сущности безопасности по логину.
 
