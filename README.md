@@ -92,16 +92,14 @@ admin.role=ADMIN
 - **Пример запроса:** GET /security
 - **Данные в ответе:** Список объектов Security.
 
+http://localhost:8080/security
+
 ### POST /security
 - **Описание:** Создание новой сущности безопасности.
 - **Принимаемые значения:** Параметры запроса - login, role, password.
 - **Пример запроса:**
-  ```json
-  {
-    "login": "example_login",
-    "role": "ADMIN",
-    "password": "example_password"
-  }
+
+http://localhost:8080/security?login=2&role=ADMIN&password=333
 
 ### PUT /security
 
@@ -109,13 +107,6 @@ admin.role=ADMIN
 
 **Принимаемые значения:** Параметры запроса - login, role, password.
 
-**Пример запроса:**
-```json
-{
-  "login": "example_login",
-  "role": "updated_role",
-  "password": "updated_password"
-}
 
 ### DELETE /security
 
