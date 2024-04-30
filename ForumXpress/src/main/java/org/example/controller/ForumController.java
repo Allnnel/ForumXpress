@@ -55,7 +55,7 @@ public class ForumController {
       topicService.addMessageToTopic(topic.getId(), message);
     }
     ResponseMessage response = new ResponseMessage("Successes", null, 200);
-    return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    return ResponseEntity.status(HttpStatus.OK).body(response);
   }
 
   @PostMapping("topic/{id}")
@@ -63,7 +63,7 @@ public class ForumController {
       @PathVariable Long id, @RequestBody Message message) throws CustomException {
     topicService.addMessageToTopic(id, message);
     ResponseMessage response = new ResponseMessage("Successes", null, 200);
-    return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    return ResponseEntity.status(HttpStatus.OK).body(response);
   }
 
   @PutMapping("message/{id}")
