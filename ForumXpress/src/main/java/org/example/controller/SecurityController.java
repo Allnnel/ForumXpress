@@ -25,7 +25,7 @@ public class SecurityController {
     List<Security> securityList = service.findAll();
     ResponseMessage response =
         new SecurityResponseMessage("Successes", null, 200, securityList, null);
-    return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    return ResponseEntity.status(HttpStatus.OK).body(response);
   }
 
   @PostMapping("security")
@@ -34,7 +34,7 @@ public class SecurityController {
       throws CustomException {
     service.save(new Security(role, login, password));
     ResponseMessage response = new ResponseMessage("Successes", null, 200);
-    return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    return ResponseEntity.status(HttpStatus.OK).body(response);
   }
 
   @PutMapping("security")
@@ -43,7 +43,7 @@ public class SecurityController {
       throws CustomException {
     service.update(new Security(role, login, password));
     ResponseMessage response = new ResponseMessage("Successes", null, 200);
-    return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    return ResponseEntity.status(HttpStatus.OK).body(response);
   }
 
   @DeleteMapping("security")
@@ -51,6 +51,6 @@ public class SecurityController {
       throws CustomException {
     service.delete(login);
     ResponseMessage response = new ResponseMessage("Successes", null, 200);
-    return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    return ResponseEntity.status(HttpStatus.OK).body(response);
   }
 }
